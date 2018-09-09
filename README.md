@@ -6,18 +6,15 @@
 
 # 基于卷积神经网络的验证码识别
 
-###　基于
-*　__卷积神经网络__
-
-*　__tensorflow__
-
-*　__python 3.5__
-
 ## 说明
 * 由于本程序使用模拟方式生成验证码数据集，最终所得预测准确率不会很高（取决于验证码的模拟程度）。
-* 本项目的模型识别准确率大概能达到__``80%``__。
+* 本项目的模型识别准确率大概能达到``80%``。
 * 本项目例子训练总用时不到一个小时。(GPU - GT940M)
 
+## 目标验证码
+![target-0](https://github.com/ZSAIm/CaptchaReconition-CNN/blob/master/images/target-captcha-0.gif)
+![target-1](https://github.com/ZSAIm/CaptchaReconition-CNN/blob/master/images/target-captcha-1.gif)
+![target-2](https://github.com/ZSAIm/CaptchaReconition-CNN/blob/master/images/target-captcha-2.gif)
 
 ## 项目包含
 * __``/model/*``__	: 经过训练的模型，其中包含两个模型。
@@ -43,8 +40,8 @@
 ## 建议
 
 ### 如需进一步提高识别率，切合目标验证码，可通过一下方式实现。
-1) 人工标记一定数量的训练集，然后再稍稍提高学习率进行训练（不要训练过猛，避免过拟合）。
-2）适当增加神经网路的复杂度，并适当修改验证码生成参数。
+1. 人工标记一定数量的训练集，然后再稍稍提高学习率进行训练（不要训练过猛，避免过拟合）。
+2. 适当增加神经网路的复杂度，并适当修改验证码生成参数。
 
 ## LICENSE
 Apache-2.0
