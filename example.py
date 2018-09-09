@@ -11,7 +11,7 @@ import os
 
 ZFsoft_CAPTCHA_URL = 'http://jwgldx.gdut.edu.cn/CheckCode.aspx'
 
-MODEL_INDEX = 42000
+MODEL_INDEX = 40000
 MODEL_NAME_FORMAT = MODEL_NAME + '-%s'
 
 
