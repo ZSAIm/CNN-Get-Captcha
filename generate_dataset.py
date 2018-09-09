@@ -1,3 +1,17 @@
+"""
+**********************************************************************
+**********************************************************************
+**      author: ZSAIm
+**      email:  405935987@163.com
+**      github: https://github.com/ZSAIm/CaptchaReconition-CNN
+**
+**                                          programming by python 3.5
+**
+**                                                      9.9-2018
+**********************************************************************
+**********************************************************************
+"""
+
 import random
 from wheezy.captcha.image import captcha, background, noise, rotate, text, curve, warp, offset, smooth
 from constant import *
