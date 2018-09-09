@@ -1,0 +1,8 @@
+/__pycache__/
+*.tfrecord*
+/.idea/
+/.ipynb_checkpoints/
+/dataset/*
+/model/old/
+*.ipynb
+arial.ttf
