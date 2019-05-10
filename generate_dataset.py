@@ -2,8 +2,8 @@
 **********************************************************************
 **********************************************************************
 **      author: ZSAIm
-**      email:  405935987@163.com
-**      github: https://github.com/ZSAIm/CaptchaReconition-CNN
+**      email:  zzsaim@163.com
+**      github: https://github.com/ZSAIm/CNN-Get-Captcha
 **
 **                                          programming by python 3.5
 **

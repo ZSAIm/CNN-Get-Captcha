@@ -1,6 +1,6 @@
 # CaptchaReconition-CNN
-### Base on 
-* __CNN__ 
+### Base on
+* __CNN__
 * __tensorflow__
 * __python 3.5__
 
@@ -33,6 +33,54 @@
 * __``matplotlib``__ : pip install matplotlib
 * __``numpy``__ : pip install numpy
 * __``PIL``__ : pip install pillow
+* __``wheezy``__ : pip install wheezy.captcha
+
+## 关于模块wheezy.captcha.image的修改
+
+> 为了实现更准确的功能，而对``wheezy.captcha.image``模块的``text``函数进行了简单的修改
+
+### 修改一：
+```python
+def text(fonts, font_sizes=None, drawings=None, color='#5C87B2',
+         squeeze_factor=0.8):
+```
+改成
+```python
+def text(fonts, font_sizes=None, drawings=None, color='#5C87B2',
+         squeeze_factor=0.8, start_x=0, start_y=0):
+```
+
+### 修改二：
+
+```python
+offset = int((width - sum(int(i.size[0] * squeeze_factor)
+                          for i in char_images[:-1]) -
+              char_images[-1].size[0]) / 2)
+for char_image in char_images:
+    c_width, c_height = char_image.size
+    mask = char_image.convert('L').point(lambda i: i * 1.97)
+    image.paste(char_image,
+                (offset, int((height - c_height) / 2)),
+                mask)
+```
+
+
+改成
+```python
+offset = start_x + random.randint(0, 15)
+# offset = int((width - sum(int(i.size[0] * squeeze_factor)
+#                           for i in char_images[:-1]) -
+#               char_images[-1].size[0]) / 2)
+offset_y = start_x + random.randint(0, 8)
+for char_image in char_images:
+    c_width, c_height = char_image.size
+    mask = char_image.convert('L').point(lambda i: i * 1.97)
+    image.paste(char_image,
+                (offset, offset_y),
+                mask)
+```
+
+
 
 ## 引用项目
 无
